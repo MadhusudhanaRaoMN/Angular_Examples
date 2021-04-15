@@ -1,0 +1,38 @@
+<h1>{{title}}</h1>
+
+<h2 [class]="color">Class Binding Example</h2>
+
+<!-- Property Binding Example-->
+Name : <input type="text" name="nm" id="test" disabled={{isDisable}}/>
+<br>
+<br>
+Test : <input type="text" name="nm2" id="test1" [disabled]=isDisable/>
+
+<!-- Event Binding Example-->
+
+<br>
+<br>
+<button (click) = "myClick()">Click Here.....</button>
+{{myValue}}
+
+
+<!-- Directives Examples-->
+
+<h2 *ngIf="false; else ElseBlock"></h2>
+<ng-template #ElseBlock>
+  <h3>Welcome to else Condition!</h3>
+</ng-template>
+
+<div *ngFor="let n of numbers">
+  {{n}}
+</div>
+
+
+<!-- Pipe Examples-->
+
+<div class="abc">
+<h4>{{title | lowercase }}</h4>
+<h4>{{title | uppercase }}</h4>
+<h4>{{title | titlecase }}</h4>
+<h4>{{title | slice:0:3 }}</h4>
+</div>
